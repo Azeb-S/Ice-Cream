@@ -11,7 +11,7 @@ app.use(express.static('public'))
 //define a default route (/)
 //app.use(express.static(path.join(__dirname, 'public')))
 app.get('/', (req, res) => {
- res.sendFile(`${import.meta.dirname}/views/index.html`)
+ res.sendFile(`${import.meta.dirname}/views/home.html`)
 })
 
 
