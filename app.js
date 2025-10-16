@@ -25,15 +25,15 @@ const PORT = 3001
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 
-// ✅ Enable static file serving (absolute path)
+// Enable static file serving (absolute path)
 app.use(express.static(path.join(__dirname, 'public')))
 
-// ✅ Serve home.html
+//  Serve home.html
 app.get('/', (req, res) => {
  res.sendFile(path.join(__dirname, 'views', 'home.html'))
 })
 
-// ✅ Start server
+// Start server
 app.listen(PORT, () => {
  console.log(`Server is running at http://localhost:${PORT}`)
 })
