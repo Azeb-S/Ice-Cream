@@ -6,10 +6,7 @@ const PORT = 3001
 // enable static file serving
 app.use(express.static('public'))
 
-//app.get('/', (req, res) => {
-//res.send('Welcome to Poppa\'s Pizza!')
-//define a default route (/)
-//app.use(express.static(path.join(__dirname, 'public')))
+
 app.get('/', (req, res) => {
  res.sendFile(`${import.meta.dirname}/views/home.html`)
 })
