@@ -1,4 +1,4 @@
-alert("hello, Ice cream")
+//alert("hello, Ice cream")
 
 document.getElementById('ice-cream').onsubmit = () => {
  let isValid = true
