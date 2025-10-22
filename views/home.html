@@ -5,57 +5,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ice Cream Order</title>
-    <!-- <link rel="stylesheet" href="/public/styles/style.css"> -->
 
-    <!-- <link rel="stylesheet" href="/styles/style.css"> -->
-    <!-- <link rel="stylesheet" href="/styles/style.css"> -->
-    <!-- from /views/home.html up to repo root, then into /public/styles -->
-    <!-- in views/home.html -->
-    <link rel="stylesheet" href="/Ice-Cream/public/styles/style.css">
-
-
-
+    <link rel="stylesheet" href="styles/style.css">
+    <!-- Link used for local edit -->
     <!-- <link rel="stylesheet" href="../public/styles/style.css"> -->
 
     <!-- link script  -->
     <!-- <script src="js/ice-cream.js"></script> -->
-    <!-- <script src="/Ice-Cream/public/js/ice-cream.js" defer></script> -->
+    <script src="js/ice-cream.js" defer></script>
 </head>
 
 <body>
     <main>
         <h1>Ice Cream Order Form</h1>
+        <!-- Form starts here  -->
         <form id="ice-cream" action="#" method="get">
             <fieldset>
+                <!-- Personla info name and email  -->
                 <legend>Personal Information</legend>
                 <label>Name: </label>
                 <br>
                 <input type="text" id="name" class="input" name="name">
-                <span id="err-name" class="error"> Cannot be empty</span>
+                <span id="err-name" class="error"> Name Cannot be empty</span>
 
                 <br><br>
                 <label>Email:
                     <br>
             <input type="text" id="email"  class="input" name="email" >
-            <span id="err-email" class="error"> Cannot be empty</span>
+            <span id="err-email" class="error"> Please Enter the correct email</span>
             </label>
             </fieldset>
 
             <fieldset>
                 <legend>Order Details</legend>
 
-                <label>Choose your Flavor:
-                <br>
+                <label>Choose your Flavor:</label>
+                <!-- Dopdown -->
 
-             <select id="flavor" class="input" name="flavor">
-              <option value="none"> --Select One--</option>
+
+                <select id="flavor" class="input" name="flavor">
+        <option value="none"> --Select One--</option>
               <option value="vanilla"> Vanilla</option>
               <option value="chocolate"> Chocolate</option>
               <option value="cherry"> Cherry</option>
              </select>
-            </label>
-                <br><br>
 
+                <span id="err-flavor" class="error"> Please select a flavor</span>
+                <br><br>
+                <!-- Radio button -->
                 <label> Choose your cone:</label>
                 <br>
 
@@ -68,8 +65,10 @@
                 <label for="cup">  
                 <input type="radio" id="cup" name="method" value="cup">"Cup"
                 </label>
+                <span id="err-cone" class="error">Please select cone</span>
 
                 <br><br>
+                <!-- Check box -->
                 <label>Toopings: </label>
                 <br>
                 <label for="sprinkies">
@@ -84,20 +83,23 @@
                 <label for="wippedcream">
                 <input type="checkbox" id="wippedcream" name="toppings[]" value="wippedcream"> Wipped Cream
             </label>
+                <span id="err-topping" class="error">Please select at list one Topping</span>
+
+
                 <br><br>
                 <label> Additional Comments</label>
                 <br>
-                <textarea name="comment" class="input" rows="5" cols="60 id=" comment "></textarea>
+                <textarea name="comment" class="input" rows="5" cols="60" id="comment"></textarea>
                 <br>
                 <br>
-                
+
 
 
 
 
             </fieldset>
             <!-- Add submit button -->
-                <button type="submit " id="submit ">
+            <button type="submit " id="submit ">
                 Submit Order
              </button>
 
